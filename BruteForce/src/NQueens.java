@@ -9,6 +9,8 @@ public class NQueens {
 
 	public static void main(String[] args) throws Exception {
 		
+		double starttime = System.currentTimeMillis();
+		
 		Scanner sc = new Scanner(new FileInputStream("res/nqueens.txt"));
 		
 		int T = sc.nextInt();
@@ -23,6 +25,9 @@ public class NQueens {
 		}
 		
 		sc.close();
+		
+		double endtime = System.currentTimeMillis();
+		System.out.println("Proceed in: "+((endtime-starttime)/1000)+"s");
 	}
 	
 	static boolean traverse(boolean[][] VISITED, int n) {
